@@ -1,0 +1,25 @@
+/*글자가 잘리면 말 줄임표*/
+@mixin ellipsis {
+    text-overflow: ellipsis;  /*넘어가면 ... 처리한다*/
+    white-space: nowrap;    /*오른쪽으로 쭉 이어지도록*/
+    overflow: hidden;       /*영역이 넘어가면 hidden으로 감춤*/
+}
+
+/*두줄 이상일 경우 말 줄임표*/
+@mixin multi-eellipsis($font-size, $line-height, $lines) {
+    font-size: $font-size;
+    line-height: $line-height;
+    max-height: $line-height * $lines;
+    overflow: hidden;
+    /*...표기*/
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;             /*몇줄 받을 지*/
+    -webkit-box-orient: vertical; /*autoprefixer: off*/  /* <--- 옆에 주석도 의미있음*/
+}
+
+//폭이 720px을 넘어간 경우 잡아주기
+@mixin common-inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+}

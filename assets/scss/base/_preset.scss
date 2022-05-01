@@ -1,0 +1,30 @@
+.screen-out {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.scroll-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;    /*영역을 뚫고 나가도 계속 한줄로 보겠다.*/
+    -webkit-overflow-scrolling: touch;  /*모바일시 터치 발생시 가속도 붙어서 움직임*/
+    -ms-overflow-style: none;           /*ie 스크롤바 감춤*/
+    scrollbar-width: none;              /*크롬 스트롤바 감춤*/
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+//functional css라고 부른다
+//하나의 기능이 하나의 css를 담고있다.
+.fw700 {
+    font-weight: 700;
+}
+
+.color-point {
+    color: $point-color;
+}

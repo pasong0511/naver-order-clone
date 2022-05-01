@@ -1,0 +1,47 @@
+.container {        //tab 매뉴 밑에서부터 시작
+    background-color: $booking-color-border151;
+    min-height: 100vh;
+    
+    //order.html의 .container .order가 아닌 경우에만 패딩값을 줘라
+    &:not(.order) {
+        padding-top: $place-header-height + $place-tab-height;
+        padding-bottom: $order-box-area-height;
+    }    
+}
+
+.common-inner {
+    margin: 0 auto;
+    max-width: 720px;    
+}
+
+.dimmed-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000, 0.8);
+    z-index: 9999;      //추가  
+    opacity: 1;         //추가
+    transition: opacity 0.3s ease;       //추가
+    &.hidden {          //추가
+        opacity: 0;
+    }
+    //살짝 밝아질때 사용
+    &.light {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+
+.badge-popular {
+    display: inline-block;
+    padding: 0 5px;
+    border-radius: 10px;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 700;
+    background-color: #ff61a7;
+    color: #fff;
+}

@@ -1,0 +1,66 @@
+.order-form-area {
+    //타이틀 부분의 그라데이션 부분
+    .page-title-area {
+        height: 105px;
+        background-image: linear-gradient(264deg, #3accff, #2cec88);
+    
+        //스크롤 내리면 보여지는 고정 타이틀 헤더
+        //타이틀의 "주문서" 글자 영역
+        .title {
+            position: fixed;        //스크롤 움직일때도 있어야 하니까 fixed
+            top: 0;                 //맨 위부터 시작
+            left: 0;
+            display: flex;          //타이틀의 텍스트를 가운데 정렬하기 위해서 flex
+            justify-content: center;
+            align-items: center;
+            width: 100%;            //가로는 꽉차게
+            height: 56px;           //스크롤 내리면 항상 56px은 유지
+            background-image: linear-gradient(264deg, #3accff, #2cec88);
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            z-index: 1;
+        }
+
+        //x버튼, 오른쪽 상단 위치
+        .btn-close {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 56px;
+            height: 56px;
+            z-index: 1;
+            .ico-close {
+                width: 18px;        //x버튼 살짝 크기 키워주기
+            }
+        }
+
+    }
+
+    .btn-order-area {
+        margin-top: 20px;
+        @include common-inner;
+        
+        .btn-order {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px $m-padding;
+            width: calc(100% - #{$m-padding}*2);
+            height: 50px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: $green-color;
+            color: #fff;
+            .ico-n-logo {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    .go-to-top {
+        padding: 26px 0;
+        background: none;
+    }
+}

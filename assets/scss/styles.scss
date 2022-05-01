@@ -1,0 +1,38 @@
+@import "./abstracts/variables_color";
+@import "./abstracts/variables";
+@import "./abstracts/mixin_common";
+
+//리셋
+@import "./base/reset";
+@import "./base/preset";
+
+
+//페이지
+@import "./pages/common";
+
+// 공통컴포넌트
+@import "./components/header_area";
+@import "./components/go_to_top";
+@import "./components/menu_item";
+@import "./components/amount_select";
+@import "./components/modal";
+
+
+//매뉴 컴포넌트
+@import "./components/menu/menu_category_area";
+@import "./components/menu/menu_list_area";
+@import "./components/menu/order_box_area";
+@import "./components/menu/order_info_area";
+@import "./components/menu/order_type";
+@import "./components/menu/recent_order_area";
+
+
+//디테일 컴포넌트
+@import "./components/detail/menu_detail_area";
+@import "./components/detail/menu_review_area";
+@import "./components/detail/option_popup_area";
+
+//오더 컴포넌트
+@import "./components/order/order_content_extra";
+@import "./components/order/order_content";
+@import "./components/order/order_form_area";

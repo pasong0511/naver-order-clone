@@ -1,0 +1,320 @@
+.option-popup-area {
+    position: fixed;                   //팝업은 브라우저 위에 떠야함
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+
+    &.show {
+        height: 100%;
+        opacity: 1;
+        z-index: 5000;
+
+        .dimmed-layer {
+            opacity: 1;
+        }
+
+        .menu-option-popup {
+            transform: translateY(0);
+        }
+    }
+
+    .dimmed-layer {
+        position: absolute;
+        opacity: 0;
+    }
+
+    //스크롤 영역으로 flex + column으로 세로 스크롤 가능하게 세로 나열
+    .menu-option-popup {
+        position: fixed;
+        bottom: 0;                          //기준점은 bottom
+        display: flex;                      //felx가 스크롤의 핵심!
+        flex-direction: column;
+        width: 100%;
+        max-height: calc(100% - 45px);      //높이 100%에서 45빼줌
+        background-color: $booking-color-border151;
+        z-index: 10000;
+        transform: translateY(110%);
+        transition: transform 0.5s ease;
+    }
+
+    //영수증의 뾰족뾰족한 부분
+    .content-top-pattern {
+        position: absolute;
+        top: -11px;
+        width: 100%;
+        height: 11px;
+        fill: white;
+    }
+
+    //사진과 메뉴이름, 개수 선택할 수 있는 부분
+    .content-top {
+        border-bottom: 1px solid $booking-color-border122;
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        z-index: 1;
+
+        //실제 포지션 & 여백 등 지정
+        .common-inner {
+            position: relative;
+            display: flex;          //내용물 가로 배치
+            align-items: center;
+            padding: 18px $m-padding 20px;
+        }
+
+        .menu-img-area {
+            position: relative;
+            margin-right: 16px;
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            overflow: hidden;   //가려줘야 after로 덮어도 원형이 유지된다.
+            //이미지 보이는 동그란 부분에 살짝 어두운 색으로 덮어줌
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(43, 29, 0, 0.1);
+            }
+        }
+        .menu-detail-area {
+            flex: 1;          //오른쪽으로 쭉 밀어줌
+            padding-right: 36px;
+        }
+
+        .menu-name {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            
+            //실제 메뉴 이름 부분
+            .name {
+                font-size: 18px;
+            }
+
+            //포장 이 써져 있는 뱃지
+            .badge {
+                margin-left: 6px;
+                padding: 0 7px;
+                border-radius: 8px;
+                background-color: #333;
+                font-size: 11px;
+                line-height: 16px;
+                letter-spacing: -0.3px;
+                color: #fff;;
+            }
+        }
+
+        .amount-select {
+            margin-top: 12px;
+        }
+
+        //닫기 버튼
+        .btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;           //오른쪽 상단으로 잡아줌
+            width: 48px;        //영역의 맨 끝으로 붙으면 안이쁨
+            height: 48px;       //버튼을 만들때는 누를 수 있는 크기 확보로 48px 많이 사용
+        }
+    }
+
+    //y축으로 세로 스크롤이 이어짐
+    .content-body {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;      //모바일에서 스크롤 원할하도록 터치
+        
+        //선택 영역
+        .option-group {
+            background-color: #fff;
+            
+            //option-group이 연달아서 나올 때 margin-top추가
+            & + .option-group {
+                margin-top: 12px;
+                
+            }
+        }
+
+        //타이틀 부분
+        .option-title {
+            padding: 18px $m-padding;
+            border-bottom: 1px dashed $booking-color-border2;       //하단에 ... 선 그려줌
+            font-weight: 800;
+            @include common-inner;     //mixin을 이용해서 common-inder의 너비 여백을 잡아줌
+        
+            //타이틀 부분
+            .title {
+                display: flex;
+                align-items: center;
+                font-weight: 18px;
+            }
+
+            //필수, 선택 등 맨 왼쪽 둥근 사각 뱃지
+            .badege {
+                margin-right: 8px;
+                padding: 0 4px;
+                border-radius: 3px;
+                background-color: $booking-color-bg194;
+                line-height: 17px;
+                font-size: 13px;
+                color: #fff;
+
+                //필수(required)인 경우
+                &.required {
+                    background-color: $booking-color-bg193;
+                    
+                }
+            }
+
+            //추가 설명이 있는 경우
+            .desc {
+                margin-top: 2px;
+                line-height: 24px;
+                font-weight: 15px;
+                font-weight: 400;
+            }
+        }
+
+        //ul : 옵션 선택 목록 
+        .option-list {
+            padding: 24px 18px 24px 28px;
+            @include common-inner   //양 옆 간격 맞춰줌 720px
+        }
+
+        //li : 실제 아이템
+        .option-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            //첫번째 아이템 아닌 경우 위로 띄어줌
+            &:not(:first-child){
+                margin-top: 14px;
+            }
+
+            //label 부분
+            .label {
+                display: flex;
+                justify-content: space-between;     //라벨 텍스트와 아이콘 떨어트리기
+                align-items: center;
+                width: 100%;
+                font-size: 17px;
+                
+                //라벨 안에서도 클래스 명에 체크가 되어있으면
+                &.checked {
+                    font-weight: 700;
+                    .price {
+                        font-weight: 600;
+                        color: $point-color;
+                    }
+                }
+
+                //라벨 이름
+                .label-txt {
+                    padding-right: 8px;     //좁아졌을때 아이콘과 붙지않도록
+                }
+
+                //옵션 선택을 위한 체크박스 임의로 아이콘 만들어주기
+                .label-icon {
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 28px;
+                    height: 28px;
+                    border: 1px solid $booking-color-border101;
+                    background-color: #fff;
+                }
+            }
+
+            .input-radio,
+            .input-check {
+                //체크가 된 상태(checked)
+                &:checked + .label {
+                    font-weight: 700;
+                }
+            }
+
+            //.input-radio 다음에 label과 label-icon이 따라서 나옴
+            .input-radio {
+                //라디오 버튼은 동그란 모양
+                & + .label .label-icon {
+                    border-radius: 100%;
+                }
+                //속성 체크된 상태(checked)이고 label > label-icon(동그란 옵션 부분)
+                &:checked + .label .label-icon {
+                    border: 8px solid $green-color;     //체크된 부분 초록색 동그라미 테두리 선택
+                }
+            }
+
+            .input-check {
+                //체크박스 버튼은 네모난 모양
+                & + .label .label-icon {
+                    border-radius: 3px;
+                }
+                //체크된 상태
+                &:checked + .label {
+                    //가격에 포인트 컬러 넣어줌
+                    .price {
+                        font-weight: 600;
+                        color: $point-color;
+                    }
+                    //체크박스에 초록색 네모난 테두리 그려줌
+                    .label-icon {
+                        position: relative;
+                        border-color: $green-color;
+                        background-color: $green-color;
+
+                        //✔모양 그려주기
+                        &::before {
+                            content: '';
+                            position: absolute; //relative - absolute로 위치 직접 잡아주기
+                            top: 6px;
+                            right: 6px;
+                            width: 14px;
+                            height: 9px;
+                            border: 2px solid #fff;
+                            border-width: 0 0 2px 2px;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    .content-bottom {
+        padding: 0 10px 10px;
+        
+        //하단의 담기 버튼
+        .btn-order {                //mixin을 이용해서 common-inder의 너비 여백을 잡아줌
+            @include common-inner;  //너비가 720px을 넘어간 경우 
+            display: block;
+            width: 100%;
+            line-height: 52px;
+            border-radius: 3px;
+            font-weight: 700;
+            background-color: $green-color;
+            color: #fff;
+            @include ellipsis;              //... 뜨게 함
+
+            &:disabled {                    //disabled인 경우
+                background-color: #c9c9c9;
+                color: $booking-color-text131;
+            }
+        }
+    }
+
+}
+
+//팝업이 떠 있을때는 뒷 배경의 스크롤이 움직이지 않아야한다.
+body.scroll-off {
+    overflow: hidden;   //body에 overflow: hidden을 넣어주면 영역 뒷 배경의 스크롤이 움직이지 않는다.
+    -ms-touch-action: none;
+    touch-action: none;
+}

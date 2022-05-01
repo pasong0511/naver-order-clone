@@ -1,0 +1,162 @@
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 18px;          
+    /*margin 값을 음수로 줘서 양쪽 여백 제거 가능*/
+    margin: 0 -1*$m-padding;    /*마진은 음수 값을 넣어줄 수 도 있음*/
+    
+    &:not(:last-child) {
+        border-bottom: 1px solid $booking-color-border144;
+    }
+
+    .menu-dedail {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    .menu-img-area {
+        position: relative;
+        flex-shrink: 0;         /*flex-shrink를 넣어주지 않으면 영역이 좁아질때 줄어들기도 함*/
+        margin-right: 12px;
+        border-radius: 5px;
+        overflow: hidden;
+
+        /*이미지가 있는 요소에만 이미지에 살짝 검정 요소 덮기*/
+        &:not(.no-img)::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+
+        .menu-img {
+            display: block;     /*차이는 크지 않지만 이미지는 블록 요소가 아니므로 블록요소 처리(임의로 만들어진 여백 등 제거)*/
+        }
+    }
+
+    .menu-desc {
+        margin-top: 4px;
+        letter-spacing: -0.4px;
+        color: $booking-color-text5;
+        @include multi-eellipsis(14px, 19px, 2);    /*폰트사이즈, 14px, 높이 19px, 2줄이 넘어간 경우 말줄임*/
+    }
+
+    
+    .menu-price {
+        margin-top: 4px;
+        line-height: 1.4;
+        font-size: 15px;
+        font-weight: 700;
+        color: $point-color;
+    }
+
+    .btn-cart {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 16px;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid $booking-color-border150;
+
+        .ico-cart {
+            width: 20px;
+            height: 20px;
+        }
+
+        .num {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            width: 18px;
+            height: 18px;   
+            line-height: 18px;
+            border-radius: 50%;
+            background-color: $point-color;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+        }
+
+        &.disabled {
+            font-size: 12px;
+            border: 0;
+            background-color: #eee;
+            color: #777;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+}
+
+.menu-name-group {
+    display: flex;
+    align-items: center;
+    
+    .menu-name {
+        font-size: 17px;
+        line-height: 22px;
+        font-weight: 700;
+        color: $booking-color-text6;
+    }
+
+    .ico-new {
+        margin-left: 4px;
+    }
+
+    .badge-popular {
+        margin-left: 6px;
+    }
+}
+
+.menu-info-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-top: 4px;
+    font-size: 14px;
+
+    /*별 모양*/
+    .menu-grade {
+        font-weight: 700;
+        color: $booking-color-text6;
+        flex-shrink: 0;
+    
+        .ico-star {
+            margin-right: 2px;
+        }
+
+        /*별 옆에 주문 수가 있는 경우 | 생성*/
+        & + .menu-number-of-order {
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 12px;
+                margin: 0 8px;
+                background-color: $booking-color-bg168;
+                transform: translateY(1px);
+            }
+        }
+    }
+
+    .menu-number-of-order {
+        color: $booking-color-text5;
+        flex-shrink: 0;
+
+        em {
+            margin-left: 4px;
+            font-style: normal;
+            font-weight: 700;
+            color: $booking-color-text6;
+        }
+    }
+
+}
