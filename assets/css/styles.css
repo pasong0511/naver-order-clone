@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*글자가 잘리면 말 줄임표*/
 /*두줄 이상일 경우 말 줄임표*/
 body {
@@ -26,7 +27,7 @@ code {
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -49,7 +50,8 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
 }
 
@@ -130,7 +132,8 @@ textarea:-ms-input-placeholder {
   opacity: 1;
 }
 
-input[readonly]::-webkit-input-placeholder, input:disabled::-webkit-input-placeholder,
+input[readonly]::-webkit-input-placeholder,
+input:disabled::-webkit-input-placeholder,
 textarea[readonly]::-webkit-input-placeholder,
 textarea:disabled::-webkit-input-placeholder {
   /* Chrome, Safari, Firefox */
@@ -138,7 +141,8 @@ textarea:disabled::-webkit-input-placeholder {
   opacity: 1;
 }
 
-input[readonly]:-ms-input-placeholder, input:disabled:-ms-input-placeholder,
+input[readonly]:-ms-input-placeholder,
+input:disabled:-ms-input-placeholder,
 textarea[readonly]:-ms-input-placeholder,
 textarea:disabled:-ms-input-placeholder {
   /* Chrome, Safari, Firefox */
@@ -146,7 +150,8 @@ textarea:disabled:-ms-input-placeholder {
   opacity: 1;
 }
 
-input[readonly]::-ms-input-placeholder, input:disabled::-ms-input-placeholder,
+input[readonly]::-ms-input-placeholder,
+input:disabled::-ms-input-placeholder,
 textarea[readonly]::-ms-input-placeholder,
 textarea:disabled::-ms-input-placeholder {
   /* Chrome, Safari, Firefox */
@@ -154,7 +159,8 @@ textarea:disabled::-ms-input-placeholder {
   opacity: 1;
 }
 
-input[readonly]::placeholder, input:disabled::placeholder,
+input[readonly]::placeholder,
+input:disabled::placeholder,
 textarea[readonly]::placeholder,
 textarea:disabled::placeholder {
   /* Chrome, Safari, Firefox */
@@ -162,7 +168,8 @@ textarea:disabled::placeholder {
   opacity: 1;
 }
 
-input[readonly]:-ms-input-placeholder, input:disabled:-ms-input-placeholder,
+input[readonly]:-ms-input-placeholder,
+input:disabled:-ms-input-placeholder,
 textarea[readonly]:-ms-input-placeholder,
 textarea:disabled:-ms-input-placeholder {
   /* IE, Edge */
@@ -170,14 +177,16 @@ textarea:disabled:-ms-input-placeholder {
   opacity: 1;
 }
 
-input::-ms-clear, input::-ms-reveal,
+input::-ms-clear,
+input::-ms-reveal,
 textarea::-ms-clear,
 textarea::-ms-reveal {
   /* IE, Edge */
   display: none;
 }
 
-input::-webkit-inner-spin-button, input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button,
 textarea::-webkit-inner-spin-button,
 textarea::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -279,11 +288,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 46px;
 }
 
@@ -292,8 +301,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 20px;
   font-weight: 600;
 }
@@ -323,19 +332,19 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 8px;
   width: 100%;
 }
 
 .header-area .tab {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 0 12px;
   font-size: 16px;
   text-align: center;
@@ -383,7 +392,7 @@ textarea::-webkit-outer-spin-button {
   font-weight: 700;
   color: #666;
   -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.04);
   text-transform: uppercase;
 }
 
@@ -406,7 +415,7 @@ textarea::-webkit-outer-spin-button {
   border-top: 2px solid #666;
   border-left: 2px solid #666;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .go-to-top .ico-up::after {
@@ -418,7 +427,7 @@ textarea::-webkit-outer-spin-button {
   height: 9px;
   background-color: #666;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .menu-item {
@@ -426,8 +435,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 18px;
   /*margin 값을 음수로 줘서 양쪽 여백 제거 가능*/
   margin: 0 -18px;
@@ -443,17 +452,17 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .menu-item .menu-img-area {
   position: relative;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   /*flex-shrink를 넣어주지 않으면 영역이 좁아질때 줄어들기도 함*/
   margin-right: 12px;
   border-radius: 5px;
@@ -508,11 +517,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-left: 16px;
   width: 40px;
   height: 40px;
@@ -554,8 +563,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu-name-group .menu-name {
@@ -578,10 +587,10 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 4px;
   font-size: 14px;
   /*별 모양*/
@@ -591,7 +600,7 @@ textarea::-webkit-outer-spin-button {
   font-weight: 700;
   color: #333;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   /*별 옆에 주문 수가 있는 경우 | 생성*/
 }
 
@@ -599,7 +608,7 @@ textarea::-webkit-outer-spin-button {
   margin-right: 2px;
 }
 
-.menu-info-group .menu-grade + .menu-number-of-order::before {
+.menu-info-group .menu-grade+.menu-number-of-order::before {
   content: '';
   display: inline-block;
   width: 1px;
@@ -607,13 +616,13 @@ textarea::-webkit-outer-spin-button {
   margin: 0 8px;
   background-color: #ededed;
   -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 .menu-info-group .menu-number-of-order {
   color: #8f8f8f;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .menu-info-group .menu-number-of-order em {
@@ -629,8 +638,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 35px;
 }
 
@@ -641,11 +650,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 35px;
   height: 35px;
   border: 1px solid #e3e3e3;
@@ -664,7 +673,8 @@ textarea::-webkit-outer-spin-button {
   color: #fff;
 }
 
-.amount-select .btn-minus.disabled, .amount-select .btn-minus:disabled,
+.amount-select .btn-minus.disabled,
+.amount-select .btn-minus:disabled,
 .amount-select .btn-plus.disabled,
 .amount-select .btn-plus:disabled {
   color: #eee;
@@ -704,11 +714,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 50px;
   height: 35px;
   border-top: 1px solid #e3e3e3;
@@ -741,7 +751,7 @@ textarea::-webkit-outer-spin-button {
   background-color: #fff;
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
   z-index: 10001;
 }
@@ -786,8 +796,8 @@ textarea::-webkit-outer-spin-button {
 
 .modal-wrapper .btn-area button {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 16px 0;
   font-size: 18px;
 }
@@ -858,8 +868,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 54px;
 }
 
@@ -881,8 +891,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 12px;
   font-size: 16px;
   height: 30px;
@@ -920,14 +930,14 @@ textarea::-webkit-outer-spin-button {
   /*닫힌 상태에서는 메뉴가 보여서는 안된다*/
 }
 
-.menu-list-area.is-closed + .is-closed {
+.menu-list-area.is-closed+.is-closed {
   margin-top: 0;
   border-top: 1px solid #f2f2f2;
 }
 
 .menu-list-area.is-closed .ico-arrow {
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .menu-list-area.is-closed .menu-list {
@@ -939,11 +949,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu-list-area .title-area {
@@ -951,8 +961,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu-list-area .title {
@@ -997,7 +1007,7 @@ textarea::-webkit-outer-spin-button {
   height: 70px;
   border-top: 1px solid #e8e8e8;
   -webkit-box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.03);
-          box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.03);
   background-color: #fff;
   z-index: 9100;
 }
@@ -1007,8 +1017,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 12px 18px;
 }
 
@@ -1040,11 +1050,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 128px;
   height: 46px;
   border-radius: 5px;
@@ -1094,8 +1104,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.3px;
@@ -1113,15 +1123,15 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 12px;
 }
 
 .tab-switch-box .tab-switch {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   background-color: rgba(0, 0, 0, 0.06);
   line-height: 40px;
   font-size: 13px;
@@ -1136,14 +1146,14 @@ textarea::-webkit-outer-spin-button {
   /*뾰족한 부분 after로 만들기 위해 사용*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: 1.2;
-          flex-flow: 1.2;
+  -ms-flex-flow: 1.2;
+  flex-flow: 1.2;
   border: 1px solid #333;
   background-color: #fff;
   font-size: 15px;
   color: #333;
   -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
-          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .tab-switch-box .tab-switch.is-active::after {
@@ -1157,7 +1167,7 @@ textarea::-webkit-outer-spin-button {
   border-width: 0 1px 1px 0;
   background-color: #fff;
   -webkit-transform: rotate(45deg) translateX(-50%);
-          transform: rotate(45deg) translateX(-50%);
+  transform: rotate(45deg) translateX(-50%);
 }
 
 .tab-switch-box .tab-switch.is-active .ico-check {
@@ -1175,8 +1185,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 16px;
   padding: 12px 16px;
   border-radius: 2px;
@@ -1223,13 +1233,13 @@ textarea::-webkit-outer-spin-button {
 
 .order-type-popup .type-item {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   /*1:1로 지정*/
   /*type-item옆에 type-item가 연달아서 오는 경우*/
 }
 
-.order-type-popup .type-item + .type-item {
+.order-type-popup .type-item+.type-item {
   /*가운데 선 생성*/
   border-left: 1px solid #eee;
 }
@@ -1239,7 +1249,7 @@ textarea::-webkit-outer-spin-button {
   height: 100px;
   display: inline-block;
   color: transparent;
-  background-image: url("/assets/images/sp_local_pay-41792025.png");
+  background-image: url("./assets/images/sp_local_pay-41792025.png");
   background-size: 773px 662px;
 }
 
@@ -1288,16 +1298,16 @@ textarea::-webkit-outer-spin-button {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   padding: 8px;
   border-right: 1px solid #f2f2f2;
   line-height: 1.42;
@@ -1319,7 +1329,7 @@ textarea::-webkit-outer-spin-button {
 
 .recent-order-area .recent-menu-item {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   position: relative;
   padding: 16px;
   width: 80px;
@@ -1420,7 +1430,7 @@ textarea::-webkit-outer-spin-button {
   background-size: cover;
   /*영역에 맞게 이미지가 덮어짐*/
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.03);
-          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.03);
   /*이미지 위에 살짝 그라데이션*/
 }
 
@@ -1462,7 +1472,7 @@ textarea::-webkit-outer-spin-button {
   border-radius: 5px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.04);
   z-index: 1;
 }
 
@@ -1482,8 +1492,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu-detail-area .menu-info-area .menu-info-group .menu-grade::before,
@@ -1495,7 +1505,7 @@ textarea::-webkit-outer-spin-button {
   height: 12px;
   background-color: #ededed;
   -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 .menu-detail-area .menu-info-area .menu-info-group .menu-grade,
@@ -1522,11 +1532,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu-detail-area .order-type-area .type-select .title {
@@ -1534,8 +1544,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: -0.3px;
@@ -1562,8 +1572,8 @@ textarea::-webkit-outer-spin-button {
 
 .menu-detail-area .order-type-area .type-select .tab-switch.is-active {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   border-radius: 3px;
 }
 
@@ -1571,11 +1581,11 @@ textarea::-webkit-outer-spin-button {
   display: none;
 }
 
-.menu-detail-area .order-type-area .type-select .tab-switch + .tab-switch {
+.menu-detail-area .order-type-area .type-select .tab-switch+.tab-switch {
   position: relative;
 }
 
-.menu-detail-area .order-type-area .type-select .tab-switch + .tab-switch::before {
+.menu-detail-area .order-type-area .type-select .tab-switch+.tab-switch::before {
   content: '';
   display: block;
   position: absolute;
@@ -1662,11 +1672,12 @@ textarea::-webkit-outer-spin-button {
   /*&:first-child::before를 위해 스트롤 왼쪽 공백 시 사용*/
 }
 
-.menu-review-area .orderer-pic-list .orderer-pic-item + .orderer-pic-item {
+.menu-review-area .orderer-pic-list .orderer-pic-item+.orderer-pic-item {
   margin-left: 1px;
 }
 
-.menu-review-area .orderer-pic-list .orderer-pic-item:first-child::before, .menu-review-area .orderer-pic-list .orderer-pic-item:last-child::after {
+.menu-review-area .orderer-pic-list .orderer-pic-item:first-child::before,
+.menu-review-area .orderer-pic-list .orderer-pic-item:last-child::after {
   content: '';
   display: block;
   width: 18px;
@@ -1720,13 +1731,13 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 15px;
   font-weight: 600;
   color: #242424;
   -webkit-transform: translateX(-2px);
-          transform: translateX(-2px);
+  transform: translateX(-2px);
 }
 
 .menu-review-area .ico-star-group {
@@ -1735,7 +1746,7 @@ textarea::-webkit-outer-spin-button {
   display: inline-block;
   width: 77px;
   height: 13px;
-  background: url("/assets/images/ico-star-group.svg") no-repeat center left;
+  background: url("./assets/images/ico-star-group.svg") no-repeat center left;
 }
 
 .menu-review-area .ico-star-group-fill {
@@ -1745,7 +1756,7 @@ textarea::-webkit-outer-spin-button {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background: url("/assets/images/ico-star-group-fill.svg") no-repeat center left;
+  background: url("./assets/images/ico-star-group-fill.svg") no-repeat center left;
 }
 
 .menu-review-area .review-text {
@@ -1776,11 +1787,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   height: 50px;
   font-size: 16px;
@@ -1797,7 +1808,7 @@ textarea::-webkit-outer-spin-button {
   border-top: 1px solid;
   border-right: 1px solid;
   -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .option-popup-area {
@@ -1822,7 +1833,7 @@ textarea::-webkit-outer-spin-button {
 
 .option-popup-area.show .menu-option-popup {
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .option-popup-area .dimmed-layer {
@@ -1838,14 +1849,14 @@ textarea::-webkit-outer-spin-button {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
   max-height: calc(100% - 45px);
   background-color: #f4f7f9;
   z-index: 10000;
   -webkit-transform: translateY(110%);
-          transform: translateY(110%);
+  transform: translateY(110%);
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -1864,7 +1875,7 @@ textarea::-webkit-outer-spin-button {
   border-bottom: 1px solid #ededed;
   background-color: #fff;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   z-index: 1;
 }
 
@@ -1874,8 +1885,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 18px 18px 20px;
 }
 
@@ -1900,8 +1911,8 @@ textarea::-webkit-outer-spin-button {
 
 .option-popup-area .content-top .menu-detail-area {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding-right: 36px;
 }
 
@@ -1910,8 +1921,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 700;
 }
 
@@ -1951,7 +1962,7 @@ textarea::-webkit-outer-spin-button {
   background-color: #fff;
 }
 
-.option-popup-area .content-body .option-group + .option-group {
+.option-popup-area .content-body .option-group+.option-group {
   margin-top: 12px;
 }
 
@@ -1969,8 +1980,8 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 18px;
 }
 
@@ -2007,11 +2018,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .option-popup-area .content-body .option-item:not(:first-child) {
@@ -2023,11 +2034,11 @@ textarea::-webkit-outer-spin-button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   font-size: 17px;
 }
@@ -2050,42 +2061,42 @@ textarea::-webkit-outer-spin-button {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   width: 28px;
   height: 28px;
   border: 1px solid #e5e5e5;
   background-color: #fff;
 }
 
-.option-popup-area .content-body .option-item .input-radio:checked + .label,
-.option-popup-area .content-body .option-item .input-check:checked + .label {
+.option-popup-area .content-body .option-item .input-radio:checked+.label,
+.option-popup-area .content-body .option-item .input-check:checked+.label {
   font-weight: 700;
 }
 
-.option-popup-area .content-body .option-item .input-radio + .label .label-icon {
+.option-popup-area .content-body .option-item .input-radio+.label .label-icon {
   border-radius: 100%;
 }
 
-.option-popup-area .content-body .option-item .input-radio:checked + .label .label-icon {
+.option-popup-area .content-body .option-item .input-radio:checked+.label .label-icon {
   border: 8px solid #01d760;
 }
 
-.option-popup-area .content-body .option-item .input-check + .label .label-icon {
+.option-popup-area .content-body .option-item .input-check+.label .label-icon {
   border-radius: 3px;
 }
 
-.option-popup-area .content-body .option-item .input-check:checked + .label .price {
+.option-popup-area .content-body .option-item .input-check:checked+.label .price {
   font-weight: 600;
   color: #ff3d3b;
 }
 
-.option-popup-area .content-body .option-item .input-check:checked + .label .label-icon {
+.option-popup-area .content-body .option-item .input-check:checked+.label .label-icon {
   position: relative;
   border-color: #01d760;
   background-color: #01d760;
 }
 
-.option-popup-area .content-body .option-item .input-check:checked + .label .label-icon::before {
+.option-popup-area .content-body .option-item .input-check:checked+.label .label-icon::before {
   content: '';
   position: absolute;
   top: 6px;
@@ -2095,7 +2106,7 @@ textarea::-webkit-outer-spin-button {
   border: 2px solid #fff;
   border-width: 0 0 2px 2px;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .option-popup-area .content-bottom {
@@ -2155,8 +2166,8 @@ body.scroll-off {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 15px;
   color: #242424;
 }
@@ -2175,23 +2186,23 @@ body.scroll-off {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 10px;
   height: 45px;
 }
 
 .order-content-extra .orderer-info-area .option-group .option-item {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .order-content-extra .orderer-info-area .input-radio {
   position: absolute;
 }
 
-.order-content-extra .orderer-info-area .input-radio:checked + .input-radio-button {
+.order-content-extra .orderer-info-area .input-radio:checked+.input-radio-button {
   border-color: #01d760;
   background-color: #01d760;
   font-weight: 700;
@@ -2286,7 +2297,7 @@ body.scroll-off {
 
 .order-content-extra .agreement-area .agreement-item.is-open .btn-toggle {
   -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .order-content-extra .agreement-area .agreement-title {
@@ -2294,11 +2305,11 @@ body.scroll-off {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-left: 12px;
   height: 44px;
   color: #242424;
@@ -2312,7 +2323,7 @@ body.scroll-off {
   width: 44px;
   height: 100%;
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .order-content-extra .agreement-area .agreement-content {
@@ -2347,7 +2358,8 @@ body.scroll-off {
   background-color: #fff;
 }
 
-.order-content .common-inner::before, .order-content .common-inner::after {
+.order-content .common-inner::before,
+.order-content .common-inner::after {
   content: '';
   display: block;
   position: absolute;
@@ -2365,7 +2377,7 @@ body.scroll-off {
 .order-content .common-inner::after {
   bottom: -5px;
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .order-content .order-content-top {
@@ -2430,8 +2442,8 @@ body.scroll-off {
 .order-content .order-content-body .menu-item {
   position: relative;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding: 22px 18px;
 }
 
@@ -2465,11 +2477,11 @@ body.scroll-off {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 8px;
 }
 
@@ -2495,11 +2507,11 @@ body.scroll-off {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 18px;
   padding: 24px 0;
   border-top: 2px solid #d5dadd;
@@ -2517,11 +2529,11 @@ body.scroll-off {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 22px auto 30px;
   width: 150px;
   line-height: 48px;
@@ -2530,7 +2542,7 @@ body.scroll-off {
   background-color: #fff;
   color: #242424;
   -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.04);
 }
 
 .order-content .btn-menu-add .ico-add {
@@ -2539,11 +2551,11 @@ body.scroll-off {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-right: 6px;
   width: 13px;
   height: 13px;
@@ -2579,11 +2591,11 @@ body.scroll-off {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   height: 56px;
   background-image: linear-gradient(264deg, #3accff, #2cec88);
@@ -2618,11 +2630,11 @@ body.scroll-off {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 20px 18px;
   width: calc(100% - 18px*2);
   height: 50px;
@@ -2641,4 +2653,5 @@ body.scroll-off {
   padding: 26px 0;
   background: none;
 }
+
 /*# sourceMappingURL=styles.css.map */
