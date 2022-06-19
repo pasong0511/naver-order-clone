@@ -1,6 +1,7 @@
 /*메뉴 리뷰 영역(menu-review-area)*/
 
 .menu-review-area {
+
     /*공통 주문자 사진 타이틀*/
     .title {
         line-height: 22px;
@@ -20,19 +21,21 @@
     .orderer-img-area {
         padding-bottom: 22px;
         background-color: #fff;
+
         .title {
             padding: 6px $m-padding 12px;
         }
     }
 
     .orderer-pic-list {
-        display: flex;      
+        display: flex;
 
         .orderer-pic-item {
-            display: flex;          /*&:first-child::before를 위해 스트롤 왼쪽 공백 시 사용*/
-            
+            display: flex;
+            /*&:first-child::before를 위해 스트롤 왼쪽 공백 시 사용*/
+
             // orderer-pic-item 옆에 또 orderer-pic-item가 오는 경우 왼쪽 띄어줌
-            & + .orderer-pic-item {
+            &+.orderer-pic-item {
                 margin-left: 1px;
             }
 
@@ -43,11 +46,18 @@
                 width: $m-padding;
                 height: 100%;
             }
+
+            & img {
+                width: 104px;
+                height: 104px;
+            }
         }
 
         .orderer-pic-link {
             position: relative;
-            display: flex;     /*a 태그는 inline 요소이기 때문에 flex 처리*/
+            display: flex;
+
+            /*a 태그는 inline 요소이기 때문에 flex 처리*/
             /*리뷰 이미지에 살짝 어두운 불투명 이미지 씌우기*/
             &::after {
                 content: '';
@@ -65,6 +75,7 @@
     .orderer-review-area {
         margin-top: 12px;
         background-color: #fff;
+
         .title {
             padding: 16px $m-padding;
         }

@@ -5,8 +5,8 @@
     .common-inner {
         position: relative;
         background-color: #fff;
-		
-		//영수증 삼각형 모양 png 파일 가져와서 befor, after로 그려주기
+
+        //영수증 삼각형 모양 png 파일 가져와서 befor, after로 그려주기
         &::before,
         &::after {
             content: '';
@@ -16,16 +16,20 @@
             width: 100%;
             height: 5px;
             background: url('../images/bg-pattern.png') repeat-x;
-            background-size: auto 5px;  //2배수로 줄이기
+            background-size: auto 5px; //2배수로 줄이기
         }
+
         &::before {
             top: -5px;
         }
+
         &::after {
             bottom: -5px;
             transform: rotate(180deg);
         }
-    }   //.common-inner
+    }
+
+    //.common-inner
 
     .order-content-top {
         position: relative;
@@ -40,7 +44,8 @@
             width: 83px;
             height: 83px;
             border-radius: 100%;
-            background: url('http://via.placeholder.com/83') no-repeat;
+            background: url('../../../../data/images/샐러디.jpg') no-repeat;
+            background-position: center;
         }
 
         //<p>"포장할게요 부분"
@@ -50,6 +55,7 @@
             font-weight: 700;
             color: $green_color;
         }
+
         //<p> 가지고 가실 수 ...
         .desc {
             margin-top: 8px;
@@ -58,6 +64,7 @@
             font-weight: 500;
             color: $booking-color-text6;
         }
+
         //<p> 담은 메뉴
         .count {
             margin-top: 8px;
@@ -66,16 +73,19 @@
             color: $booking-color-text4;
             letter-spacing: -0.4px;
         }
-    }   //.order-content-top
+    }
+
+    //.order-content-top
 
     .order-content-body {
-        border-top: 1px dashed $booking-color-border147;    //바디 상단 구분 선
+        border-top: 1px dashed $booking-color-border147; //바디 상단 구분 선
 
         //이미지 없다는 svg 파일
         .no-order {
             padding: 70px 0;
             text-align: center;
         }
+
         //.담은 메뉴가 없습니다.
         .txt {
             margin-top: 6px;
@@ -85,18 +95,18 @@
 
         //<ul> 부분
         .menu-list {
-            padding: 0 $m-padding;          //좌우 여백
+            padding: 0 $m-padding; //좌우 여백
         }
 
         //<li> 부분
         .menu-item {
             position: relative;
-            align-items: flex-start;        //상단 기준으로 정렬
+            align-items: flex-start; //상단 기준으로 정렬
             padding: 22px $m-padding;
-        
+
             //<p> 부분
-            .menu-name-group{
-                padding-right: 40px;        //메뉴이름 옆에 공간 주기(작아졌을때 x버튼과 겹치지 않도록)
+            .menu-name-group {
+                padding-right: 40px; //메뉴이름 옆에 공간 주기(작아졌을때 x버튼과 겹치지 않도록)
             }
 
             .menu-name {
@@ -140,14 +150,16 @@
                 position: absolute;
                 top: 0;
                 right: 0;
-                padding: 22px 18px;     //터치 영역이 크도록
+                padding: 22px 18px; //터치 영역이 크도록
 
                 .ico-delete {
                     width: 14px;
                     opacity: 0.3;
                 }
             }
-        }   //.menu-item
+        }
+
+        //.menu-item
 
         //"총 주문금액"과 "총 금액"
         .order-total {
@@ -161,11 +173,13 @@
             font-weight: 700;
 
             .total-price {
-                font-size: 19px;    //금액 부분이 조금 더 작음
+                font-size: 19px; //금액 부분이 조금 더 작음
                 color: $point-color;
             }
         }
-    }   //.order-content-bod
+    }
+
+    //.order-content-bod
 
     //메뉴 추가 둥근 버튼
     .btn-menu-add {
@@ -179,8 +193,8 @@
         border: 1px solid $booking-color-border101;
         background-color: #fff;
         color: $booking-color-text2;
-        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.04);
-        
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.04);
+
         .ico-add {
             position: relative;
             display: flex;
@@ -197,6 +211,7 @@
                 height: 1px;
                 background-color: $green-color;
             }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -208,5 +223,6 @@
         }
     }
 
-} //.order-content
+}
 
+//.order-content

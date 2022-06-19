@@ -1673,6 +1673,11 @@ textarea::-webkit-outer-spin-button {
   height: 100%;
 }
 
+.menu-review-area .orderer-pic-list .orderer-pic-item img {
+  width: 104px;
+  height: 104px;
+}
+
 .menu-review-area .orderer-pic-list .orderer-pic-link {
   position: relative;
   display: -webkit-box;
@@ -2376,7 +2381,8 @@ body.scroll-off {
   width: 83px;
   height: 83px;
   border-radius: 100%;
-  background: url("http://via.placeholder.com/83") no-repeat;
+  background: url("../../../../data/images/샐러디.jpg") no-repeat;
+  background-position: center;
 }
 
 .order-content .order-content-top .title {
